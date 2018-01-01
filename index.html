@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+
+<!-- Title and image -->
+<h2><center>Tom's Restaurant</center></h2>
+<hr>
+
+            <img src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg"; style="padding: 15px">    
+
+<!-- Reservations -->
+    <div class="row">      
+    <div class="medium-12 columns">
+            <h3><center>Make a Reservation</center></h3>
+            <p>The famous fictional Monk's Café in the television sitcom Seinfeld, where comedian Jerry Seinfeld's and his friends regularly gathered to eat.</p><label>Party size<select>
+                <option value="husker">
+                    1
+                </option>
+                <option value="starbuck">
+                    2
+                </option>
+                <option value="hotdog">
+                    3
+                </option>
+                <option value="apollo">
+                    4+
+                </option>
+            </select></label>
+
+                    <form>
+                        Email
+                        <input type='text' id="middle-label" placeholder="Felix@gmail.com"
+                    type="text">
+                    </form>
+
+                    <form>
+                    Reservation date (date and time):
+                    <input type="datetime-local" name="bdaytime">
+                    </form>
+                    <a class="button large expanded alert" href="#">Confirm Reservation</a>
+        </div>
+
+<!-- Existing Reservations -->
+<div class="row">      
+<div class="medium-12 columns">
+<hr>
+<h3><center>Existing Reservations</center></h3>
+
+    <table style="width:97%; text-align:left"; table-align="center">
+  <tr>
+    <th>Email</th>
+    <th>Date and time</th> 
+    <th>Party Size</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>12-15/2017 at 12pm</td> 
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>12-19/2017 at 1pm</td> 
+    <td>4+</td>
+  </tr>
+</table>
+        </div>
+
+<!-- Map section -->
+<html> 
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+  </br>
+<hr>
+<h3><center>Come Dine with Us!</center></h3>
+    <div id="map"></div>
+    
+    <script>
+      function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 40.8054491, lng: -73.9654415},
+    zoom: 15
+  });
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc&callback=initMap">
+    </script>
+
+
+
+
+
+
+<!-- Reviews section -->
+<hr>
+<div class="tabs-content" data-tabs-content="example-tabs">
+<div class="tabs-panel is-active" id="panel1">
+
+    <h3><center>Reviews</style></center></h3>
+
+        <div class="media-object stack-for-small">
+        <div class="media-object-section">
+        <img class="thumbnail" src="download.jpg" style="width:50px;height:50px;" >
+        </div>
+
+            <div class="media-object-section">
+                <h6>Jerry Seinfeld on The BIG Salad</h6>
+                    <p>“Big lettuce, big carrots, tomatoes like volleyballs.”</p>
+            </div>
+
+        </div>
+
+            <div class="media-object stack-for-small">
+                <div class="media-object-section">
+                <img class="thumbnail" src="images.png" style="width:50px;height:50px;" >
+            </div>
+
+            <div class="media-object-section">
+                <h6>Mary T.</h6>
+                <p>"Don't come for the food if that's what you're planning. It's overpriced diner food."</p>       
+            </div>
+
+            </div>
+
+                <div class="media-object stack-for-small">
+                    <div class="media-object-section">
+                    <img class="thumbnail" src="download.png" style="width:50px;height:50px;" >
+                    </div>
+
+                    <div class="media-object-section">
+                        <h6>Katniss E.</h6>
+                        <p>"Definitely book a resevation on the site, the place can get packed."</p>
+                    </div>
+                </div>
+
+                <div><label>My Review 
+                <textarea placeholder="Start typing your review here"></textarea></label> <button class=
+                "button alert">Submit Review</button>
+
+            </div>
+
+
+
+</div>
+
+
+
+	<script src="Unit9_project/jquery-3.2.1.min.js"></script>
+	<script src="Unit9_project/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc" async defer></script>
+</body>
+</html>
