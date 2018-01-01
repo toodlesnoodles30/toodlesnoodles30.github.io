@@ -76,18 +76,22 @@
         </div>
 
 <!-- Map section -->
+
 <html> 
   <head>
     <style>
        #map {
-        height: 400px;
+        height: 300px;
         width: 100%;
+        padding: 5%;
        }
     </style>
   </head>
   <body>
   </br>
+
 <hr>
+
 <h3><center>Come Dine with Us!</center></h3>
     <div id="map"></div>
     
@@ -97,7 +101,13 @@
     center: {lat: 40.8054491, lng: -73.9654415},
     zoom: 15
   });
+
+  var marker = new google.maps.Marker({ //use Marker constructor to add a marker to map
+      position: {lat: 40.8054491, lng: -73.9654415},
+      map: map
+    });
 }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc&callback=initMap">
