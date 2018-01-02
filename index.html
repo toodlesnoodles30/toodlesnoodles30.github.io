@@ -8,21 +8,31 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-
+<style>
+body {
+    background-color: black
+}
+</style>
 <body>
 
-
 <!-- Title and image -->
-<h2><center>Tom's Restaurant</center></h2>
-<hr>
 
+<h2 style="color:white;"><center>Tom's Restaurant</center></h2>
+<div class="medium-12 columns">
+<center>
+    <p1 style="color:white; text-align:left; padding: 15px">
+        The famous fictional Monk's Café in the television sitcom Seinfeld, where comedian Jerry Seinfeld's and his friends regularly gathered to eat. 
+    </p1>
+</center>
+</div>
             <img src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg"; style="padding: 15px">    
 
 <!-- Reservations -->
     <div class="row">      
     <div class="medium-12 columns">
-            <h3><center>Make a Reservation</center></h3>
-            <p>The famous fictional Monk's Café in the television sitcom Seinfeld, where comedian Jerry Seinfeld's and his friends regularly gathered to eat.</p><label>Party size<select>
+            <h3 style="color:white";><center>Make a Reservation</center></h3>
+            
+            <label style="color:white;">Party size<select>
                 <option value="husker">
                     1
                 </option>
@@ -37,13 +47,13 @@
                 </option>
             </select></label>
 
-                    <form>
+                    <form style="color:white;">
                         Email
                         <input type='text' id="middle-label" placeholder="Felix@gmail.com"
                     type="text">
                     </form>
 
-                    <form>
+                    <form style="color:white;">
                     Reservation date (date and time):
                     <input type="datetime-local" name="bdaytime">
                     </form>
@@ -54,7 +64,7 @@
 <div class="row">      
 <div class="medium-12 columns">
 <hr>
-<h3><center>Existing Reservations</center></h3>
+<h3 style="color:white;"><center>Existing Reservations</center></h3>
 
     <table style="width:97%; text-align:left"; table-align="center">
   <tr>
@@ -92,11 +102,12 @@
 
 <hr>
 
-<h3><center>Come Dine with Us!</center></h3>
+<h3 style="color:white;"><center>Come Dine with Us!</center></h3>
     <div id="map"></div>
     
     <script>
       function initMap() {
+ 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.8054491, lng: -73.9654415},
     zoom: 15
