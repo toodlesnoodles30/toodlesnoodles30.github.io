@@ -62,7 +62,7 @@
 <!-- Existing Reservations -->
 <div class="row">      
 <div class="medium-12 columns">
-<hr>
+
 <h3>Existing Reservations</h3>
 
     <table class="center">
@@ -86,21 +86,18 @@
         </div>
 
 <!-- Map section -->
-
 <html> 
   <head>
     <style>
        #map {
-        height: 300px;
+        height: 350px;
         width: 100%;
         padding: 5%;
        }
     </style>
   </head>
   <body>
-  </br>
 
-<hr>
 
 <h3>Come Dine with Us!</h3>
     <div id="map"></div>
@@ -108,12 +105,14 @@
     <script>
       function initMap() {
  
+ // Updated coordinates
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.8054491, lng: -73.9654415},
     zoom: 15
   });
 
-  var marker = new google.maps.Marker({ //use Marker constructor to add a marker to map
+// use Marker constructor to add a marker to map
+  var marker = new google.maps.Marker({ 
       position: {lat: 40.8054491, lng: -73.9654415},
       map: map
     });
@@ -121,7 +120,8 @@
 
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc&callback=initMap"> 
+    // API key
     </script>
 
 
@@ -138,7 +138,7 @@
 
         <div class="media-object stack-for-small">
         <div class="media-object-section">
-        <img class="thumbnail" src="download.jpg" style="width:50px;height:50px;" >
+        <img class="thumbnail" src="download.jpg">
         </div>
 
             <div class="media-object-section">
@@ -150,7 +150,7 @@
 
             <div class="media-object stack-for-small">
                 <div class="media-object-section">
-                <img class="thumbnail" src="images.png" style="width:50px;height:50px;" >
+                <img class="thumbnail" src="images.png">
             </div>
 
             <div class="media-object-section">
@@ -162,7 +162,7 @@
 
                 <div class="media-object stack-for-small">
                     <div class="media-object-section">
-                    <img class="thumbnail" src="download.png" style="width:50px;height:50px;" >
+                    <img class="thumbnail" src="download.png" >
                     </div>
 
                     <div class="media-object-section">

@@ -1,3 +1,9 @@
+/*Page style*/
+
+ img {
+   max-width: 100%;
+}
+
 body {
     background-color: #001a33;
     border-style: hidden;
@@ -5,10 +11,18 @@ body {
 
 div {
 	center;
+	margin: 2rem 0;
+
 }
 
 div.row {
 	center;
+}
+
+div.map {
+	margin-left:auto; 
+    margin-right:auto;
+    vertical-align:center;
 }
 
 h2 {
@@ -29,6 +43,7 @@ p {
 }
 
 
+/*Reservation section*/
 form {
 	color: white;
 }
@@ -36,10 +51,11 @@ label {
 	color: white;
 }
 
+/*Existing reservation*/
 th {
     text-align: left;
-    table-align:center;
-    padding-left: 50px;
+    table-align: center;
+    padding: auto;
 }
 
 th, td {
@@ -50,3 +66,20 @@ th, td {
     margin-left:auto; 
     margin-right:auto;
   }
+
+
+ /*Review section*/
+ img.thumbnail {
+ 	width:50px;
+ 	height:50px;
+ 	max-width: 50px;
+ 	max-height: 50px;
+ }
+
+h6 {
+	max-width: 100%;
+	margin: .4rem 0 1.2rem 0;
+
+}
+
+
