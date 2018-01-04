@@ -7,6 +7,7 @@
 body {
     background-color: #001a33;
     border-style: hidden;
+    padding: 20px;
 }
 
 div {
@@ -16,7 +17,8 @@ div {
 }
 
 div.row {
-	center;
+	margin: auto;
+    center;
 }
 
 div.map {
@@ -34,8 +36,8 @@ h2 {
 h3 {
     color: white;
     text-align: center;
-    padding-top:25px;
 }
+
 
 p {
     color: white;
@@ -47,12 +49,27 @@ p {
 form {
 	color: white;
 }
+
+
 label {
 	color: white;
+    text-align:left;
+    max-width: 50%:
 }
+
+label.dropdown-menu {
+    color: white;
+    text-align:left;
+    max-width: 50%:;
+
+}
+
 
 /*Existing reservation*/
 th {
+    center;
+    color: white;
+    white-space: 2%;
     text-align: left;
     table-align: center;
     padding: auto;
@@ -62,10 +79,33 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
- table.center {
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    width:97%;
+  }
+
+table.reservations {
+    center;
     margin-left:auto; 
     margin-right:auto;
   }
+
+ul.reservations    {
+    center;
+ }
+
+div.form-group {
+    text-align: left;
+    table-align: center;
+}
+
+p.reservation {
+    text-align: center;
+    margin: auto;
+
+}
+
 
 
  /*Review section*/

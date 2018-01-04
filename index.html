@@ -6,17 +6,28 @@
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" type="text/css" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<style>
+    
 
-</style>
+    <style type="text/css">
+        #map {
+        height: 400px;
+        width: 100%;
+        padding: 5%;
+       }
+    </style>
+
+</head>
+
+
 <body>
 
 <!-- Title and image -->
 
-<h2>Tom's Restaurant</h2>
+<h2>Monks Café</h2>
+<hr>
+
 <div class="medium-12 columns">
 <center>
     <p1 style="color:white; text-align:left; padding: 15px">
@@ -27,166 +38,88 @@
             <img src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg"; style="padding: 15px">    
 
 <!-- Reservations -->
-    <div class="row">      
-    <div class="medium-12 columns">
+<div class="row text-center">
+<div class="medium-12 columns">
+           
             <h3>Make a Reservation</h3>
-            
-            <label>Party size<select>
+            <hr>
+
+
+    <form class="form-inline reservation-form">
+      <div class="form-group">Full Name
+        <input type="text" class="form-control reservation-name" placeholder="Start typing your name here">
+
+   
+   <button style="text-align: left">Select a day<select>
+              <ul class="dropdown-menu reservation-day">
+
                 <option value="husker">
-                    1
+                    Today
                 </option>
                 <option value="starbuck">
-                    2
+                    Tomorrow
                 </option>
                 <option value="hotdog">
-                    3
+                    The day after next
                 </option>
-                <option value="apollo">
-                    4+
-                </option>
-            </select></label>
+           </ul> </select></button>
+          
+      </div>
+      <button class="button large expanded alert" href="#">Confirm Reservation</button>
+    </form>
+    </div>
 
-                    <form>
-                        Email
-                        <input type='text' id="middle-label" placeholder="Felix@gmail.com"
-                    type="text">
-                    </form>
-
-                    <form>
-                    Reservation date (date and time):
-                    <input type="datetime-local" name="bdaytime">
-                    </form>
-                    <a class="button large expanded alert" href="#">Confirm Reservation</a>
-        </div>
-
-<!-- Existing Reservations -->
-<div class="row">      
-<div class="medium-12 columns">
-
-<h3>Existing Reservations</h3>
-
-    <table class="center">
-    <table style="width:97%">
-  <tr>
-    <th>Email</th>
-    <th>Date and time</th> 
-    <th>Party Size</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>12-15/2017 at 12pm</td> 
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>12-19/2017 at 1pm</td> 
-    <td>4+</td>
-  </tr>
-</table>
-        </div>
-
-<!-- Map section -->
-<html> 
-  <head>
-    <style>
-       #map {
-        height: 350px;
-        width: 100%;
-        padding: 5%;
-       }
-    </style>
-  </head>
-  <body>
-
-
-<h3>Come Dine with Us!</h3>
-    <div id="map"></div>
-    
-    <script>
-      function initMap() {
- 
- // Updated coordinates
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.8054491, lng: -73.9654415},
-    zoom: 15
-  });
-
-// use Marker constructor to add a marker to map
-  var marker = new google.maps.Marker({ 
-      position: {lat: 40.8054491, lng: -73.9654415},
-      map: map
-    });
-}
-
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc&callback=initMap"> 
-    // API key
-    </script>
-
-
-
-
-
-
-<!-- Reviews section -->
+  <h3>Existing Reservations</h3>
 <hr>
-<div class="tabs-content" data-tabs-content="example-tabs">
-<div class="tabs-panel is-active" id="panel1">
 
-    <h3 style="color:black">Reviews</style></h3>
+    <ul class="reservations"></ul>
+        <table class="Reservations">
+        <table style="align-self: center">
 
-        <div class="media-object stack-for-small">
-        <div class="media-object-section">
-        <img class="thumbnail" src="download.jpg">
-        </div>
+  
+  <script id="reservation-template" type="text/x-handlebars-template">
+    <li data-id="{{reservationId}}">
 
-            <div class="media-object-section">
-                <h6>Jerry Seinfeld on The BIG Salad</h6>
-                    <p style="color:black">“Big lettuce, big carrots, tomatoes like volleyballs.”</style></p>
-            </div>
-
-        </div>
-
-            <div class="media-object stack-for-small">
-                <div class="media-object-section">
-                <img class="thumbnail" src="images.png">
-            </div>
-
-            <div class="media-object-section">
-                <h6>Mary T.</h6>
-                <p style="color:black">"Don't come for the food if that's what you're planning. It's overpriced diner food."</style></p>       
-            </div>
-
-            </div>
-
-                <div class="media-object stack-for-small">
-                    <div class="media-object-section">
-                    <img class="thumbnail" src="download.png" >
-                    </div>
-
-                    <div class="media-object-section">
-                        <h6>Katniss E.</h6>
-                        <p style="color:black">"Definitely book a resevation on the site, the place can get packed."</style></p>
-                    </div>
-                </div>
-
-                <div><label>My Review 
-                <textarea placeholder="Start typing your review here"></textarea></label> <button class=
-                "button alert">Submit Review</button>
-
-            </div>
-
-
-
+      <p class="reservation" style="color: white">{{name}}'s reservation for {{day}}</p> 
+    </li>
+  </script>
+</table>
 </div>
 
 
 
-	<script src="Unit9_project/jquery-3.2.1.min.js"></script>
-	<script src="Unit9_project/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<!-- Map section -->
+<h3>Come Dine with Us!</h3>
+<hr>
+    <div id="map"></div>
+    
+
+
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc"></script>
+
+
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDozJb55d-Ut-66i8mpiTUwfrDl9dIT4Qc" async defer></script>
+
+<!-- Custom JS -->
+    <script src="main.js"></script>
+
+    <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  
+  
+    
 </body>
 </html>
