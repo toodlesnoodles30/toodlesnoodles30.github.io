@@ -26,7 +26,7 @@ var marker = new google.maps.Marker({
 });
 
 
-// try shit zone
+// try shit zone for JS validation
 function validateForm() {
     var x = forms["reservation-form"]["reservation-name"].value;
     if (x == "") {
@@ -38,32 +38,22 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
- 
-
 // create reservationData object which will be populated with user input
-var reservationData = {};
-
-$('.reservation-day li').on('click', function() { //having issues here, would like to select the day to choose option, not just click this button.
-  reservationData.day = $(this).text(); // set the day when an option is clicked on
-  });
-
 $('.reservation-form').on('submit', function(event) { //
   event.preventDefault(); //when submitted, the name data should be set
 
-  reservationData.name = $('.reservation-name').val();
+  var day = $('.reservation-day').val();
+  var name = $('.reservation-name').val();
 
 // create a section for reservations data in your db
   var reservationsReference = database.ref('reservations');
 
-  reservationsReference.push(reservationData);
+  reservationsReference.push({
+    name: name,
+    day: day
+  });
 });
+
 
 // retrieve reservations data when page loads and when reservations are added
 function getReservations() {
@@ -99,18 +89,6 @@ var context = { // Create an object literal with the data we'll pass to Handleba
   });
 };
 
-// Delete
-$('.reservations').on('click', '.delete', function (e) {
-  // Get the ID for the comment we want to update
-  var id = $(e.target).parent().data('id')
-
-  // find comment whose objectId is equal to the id we're searching with
-  var reservationsReference = database.ref('reservations/' + id)
-
-
-  // Use remove method to remove the comment from the database
-  reservationsReference.remove()
-});
 
 getReservations();// When page loads, get reservations
 
